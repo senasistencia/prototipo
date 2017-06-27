@@ -157,10 +157,9 @@ div.prog{
   margin-left: 280px;
   margin-top: 100px;
 
-
 }
 
-.programa{
+.centro{
   background:#e6f0f7;
   color:#015456;
   display: inline-block;
@@ -171,9 +170,10 @@ div.prog{
   padding: 15px;
   border-left: 5px solid #0090A5;
   box-shadow: 0px 3px 10px #90A4AE;
+  cursor: pointer;
 }
 
-.programa:hover{
+.centro:hover{
   background:#f8fafb;
 }
 

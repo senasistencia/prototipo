@@ -5,10 +5,10 @@
 
     <nav>
       <ul>
-        <a href="programas.php">
+        <a href="centros.php">
         <li>
           <div class="barra"></div>
-          <p class="boton">Programas</p>
+          <p class="boton">Centro de formacion</p>
         </li>
         </a>
         <a href="#">
