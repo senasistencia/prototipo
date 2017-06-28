@@ -1,11 +1,15 @@
+<?php
+if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    
     <title>senasistencia</title>
     <link rel="stylesheet" href="css/estilos.css">
-<link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
   </head>
   <body>
       <header id="cabecera" >

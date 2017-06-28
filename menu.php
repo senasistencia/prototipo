@@ -5,7 +5,7 @@
 
     <nav>
       <ul>
-        <a href="centros.php">
+        <a href="centro-vista.php">
         <li>
           <div class="barra"></div>
           <p class="boton">Centro de formacion</p>
@@ -23,7 +23,7 @@
           <p class="boton">Registros</p>
         </li>
         </a>
-        <a href="#">
+        <a href="edicion.php">
         <li>
           <div class="barra"></div>
           <p class="boton">Edicion</p>

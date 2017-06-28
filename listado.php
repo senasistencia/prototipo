@@ -1,5 +1,6 @@
 <?php include("header.php"); ?>
  <?php include("menu.php"); ?>
+ <?php require("modelo/aprendiz-modelo.php"); $modelo = new AprendizModelo(); ?>
 <div class="listas">
   <h2>Listado de aprendices</h2>
   <div class="listado">
@@ -10,75 +11,17 @@
         <td>Apellido</td>
         <td>Asistio</td>
       </tr>
-      <tr id="datos">
-        <td>1085914485</td>
-        <td>MAURICIO JAVIER</td>
-        <td>BRAVO OBANDO</td>
-        <td><input type="checkbox" id="a">
-          <label for="a"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1061705482</td>
-        <td>MONICA ANDREA</td>
-        <td>CABRERA BEDOYA</td>
-        <td><input type="checkbox" id="b">
-          <label for="b"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1061734250</td>
-        <td>ERAZO CASTRO</td>
-        <td>LUIS FELIPE</td>
-        <td><input type="checkbox" id="c">
-          <label for="c"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1060989140</td>
-        <td>JIMENEZ JIMENEZ</td>
-        <td>CLAUDIA SOCORRO</td>
-        <td><input type="checkbox" id="d">
-          <label for="d"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1120561633</td>
-        <td>DEBORA</td>
-        <td>CABEZAS PARADA</td>
-        <td><input type="checkbox" id="e">
-          <label for="e"></label></td>
-      </tr><tr id="datos">
-        <td>1143949628</td>
-        <td>JULIAN CAMILO</td>
-        <td>VELASQUEZ PAZ</td>
-        <td><input type="checkbox" id="f">
-          <label for="f"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1061707177</td>
-        <td>KAROL JOE</td>
-        <td>SANCHEZ ROJAS</td>
-        <td><input type="checkbox" id="g">
-          <label for="g"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1004418510</td>
-        <td>AMANDA</td>
-        <td>PARRA CAMPOS</td>
-        <td><input type="checkbox" id="h">
-          <label for="h"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1061707177</td>
-        <td>MEYLIN VIVIANA</td>
-        <td>BARRERA MURIEL</td>
-        <td><input type="checkbox" id="i">
-          <label for="i"></label></td>
-      </tr>
-      <tr id="datos">
-        <td>1023017475</td>
-        <td>ALMA MARCELA</td>
-        <td>SILVA DE ALEGRIA</td>
-        <td><input type="checkbox" id="j">
-          <label for="j"></label></td>
-      </tr>
+      <?php foreach ($modelo->consultarAprendiz($id) as $aprendiz) {?>
+        <tr id="datos">
+          <td><?php echo $aprendiz->Documento_Aprendiz;?></td>
+          <td><?php echo $aprendiz->Nombre;?></td>
+          <td><?php echo $aprendiz->Apellido;?></td>
+          <td><input type="checkbox" id="<?php echo $aprendiz->ID_Aprendiz?>">
+            <label for="<?php echo $aprendiz->ID_Aprendiz?>"></label></td>
+        </tr>
+    <?php } ?>
+
+
     </table>
   </div>
   <section id="main">
